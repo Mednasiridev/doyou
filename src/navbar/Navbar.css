@@ -1,0 +1,12 @@
+.navbar-fixed-top{
+	background-color: #000;
+}
+.navbar-content{
+	width: 100%;
+}
+.navbar-content img{
+	//width: 50%;
+}
+.navbar-logo-title{
+	color: #fff;font-family: fantasy;
+}

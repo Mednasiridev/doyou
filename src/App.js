@@ -1,26 +1,32 @@
 import React, { Component } from 'react';
+import { BrowserRouter, Route, Link,Switch } from "react-router-dom";
 import logo from './logo.svg';
+
 import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import Navbar from './navbar/Navbar.js';
+import Content from './Content/Content.js';
+import Footer from './Footer/Footer.js';
+import Quizmarried from './Quizmarried/Quizmarried.js';
+import Quizmarriedresult from './Quizmarriedresult/Quizmarriedresult.js';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <p>
-            Edit <code>src/App.js</code> and save to reload.
-          </p>
-          <a
-            className="App-link"
-            href="https://reactjs.org"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Learn React
-          </a>
-        </header>
-      </div>
+        <BrowserRouter>
+          <div className="App">
+           <Navbar />
+          
+           <Switch>
+            <Route exact path="/" component={Content}/>
+            <Route exact path="/will-i-get-married" component={Quizmarried}/>
+            <Route exact path="/will-i-get-married/result" component={Quizmarriedresult}/>
+           </Switch>
+           <Footer />
+          </div>
+        </BrowserRouter> 
     );
   }
 }

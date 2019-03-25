@@ -1,0 +1,12 @@
+.special-color-dark {
+    background-color: #000!important;
+}
+footer.page-footer a {
+    color: #fff;
+}
+
+footer.page-footer .footer-copyright {
+    overflow: hidden;
+    background-color: rgba(0,0,0,.2);
+    color: rgba(255,255,255,.6);
+}
